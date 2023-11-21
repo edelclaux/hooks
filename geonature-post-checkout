@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# #############################################################################
+# init var and env
+# #############################################################################
+
+source backend/venv/bin/activate
+
+if ! geonature db status 1> null 2>&1; then 
+    >&2 echo "--"
+    >&2 echo "-- ---------------------------------------------------------------------"
+    >&2 echo "-- ALEMBIC ERROR"
+    >&2 echo "-- ---------------------------------------------------------------------"
+    >&2 echo "--"
+    >&2 echo "-- geonature db status failed. Something is wrong with your alembic revisions."
+    >&2 echo "-- Maybe you forgot to downgrade before switching branch ?"
+    >&2 echo "--"
+    >&2 echo "--"
+    >&2 echo "-- BACK TO THE PREVIOUS COMMIT"
+    >&2 echo "--"
+    >&2 echo "--"
+    >&2 git checkout -
+    >&2 echo "--"
+    >&2 echo "--"
+fi
