@@ -6,7 +6,7 @@
 
 source backend/venv/bin/activate
 
-if ! geonature db status 1> null 2>&1; then 
+if ! geonature db status 1> /dev/null 2>&1; then 
     >&2 echo "--"
     >&2 echo "-- ---------------------------------------------------------------------"
     >&2 echo "-- ALEMBIC ERROR"
