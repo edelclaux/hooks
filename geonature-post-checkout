@@ -16,10 +16,7 @@ if ! geonature db status 1> /dev/null 2>&1; then
     >&2 echo "-- Maybe you forgot to downgrade before switching branch ?"
     >&2 echo "--"
     >&2 echo "--"
-    >&2 echo "-- BACK TO THE PREVIOUS COMMIT"
-    >&2 echo "--"
-    >&2 echo "--"
-    git checkout -
+    >&2 echo "-- You should get back to the previousbranhc "
     >&2 echo "--"
     >&2 echo "--"
 fi
