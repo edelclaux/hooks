@@ -8,9 +8,10 @@ source backend/venv/bin/activate
 
 if ! geonature db status 1> /dev/null 2>&1; then
     echo >&2 -e "// /////////////////////////////////////////"
-    echo >&2 -e "// Alembic in dirty state"
+    echo >&2 -e "//"
+    echo >&2 -e "// Alembic is dirty"
     echo >&2 -e "// Maybe you forgot to downgrade alembic ?"
-    echo >&2 -e "// Back to previous branch"
+    echo >&2 -e "//"
     echo >&2 -e "// /////////////////////////////////////////"
     git checkout -
     exit 1
